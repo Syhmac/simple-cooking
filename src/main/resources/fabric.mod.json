@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "simple-cooking",
+	"version": "${version}",
+	"name": "Simple Cooking",
+	"description": "Adds new cooking system to Minecraft.",
+	"authors": [
+		"_Syhmac"
+	],
+	"contact": {
+		"homepage": "https://syhmac.pl",
+		"sources": "https://github.com/Syhmac/simple-cooking"
+	},
+	"license": "SMPL-1.0",
+	"icon": "assets/simple-cooking/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"syhmac.simple_cooking.SimpleCooking"
+		],
+		"client": [
+			"syhmac.simple_cooking.client.SimpleCookingClient"
+		]
+	},
+	"mixins": [
+		"simple-cooking.mixins.json",
+		{
+			"config": "simple-cooking.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
