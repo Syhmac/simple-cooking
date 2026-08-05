@@ -1,0 +1,12 @@
+{
+  "type": "simple-cooking:stove",
+  "ingredients": [
+    "minecraft:milk_bucket",
+    "minecraft:sugar",
+    "minecraft:cocoa_beans"
+  ],
+  "result": {
+    "id": "simple-cooking:chocolate",
+    "count": 1
+  }
+}
