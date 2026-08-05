@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "simple-cooking:block/stove_front_off",
+    "side": "simple-cooking:block/stove_side",
+    "top": "simple-cooking:block/stove_top",
+    "bottom": "simple-cooking:block/stove_bottom"
+  }
+}

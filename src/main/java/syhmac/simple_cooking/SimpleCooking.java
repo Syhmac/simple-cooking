@@ -15,6 +15,7 @@ public class SimpleCooking implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.init();
+		ModBlocks.init();
 		LOGGER.info("Simple cooking has been initialized.");
 	}
 

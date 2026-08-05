@@ -1,5 +1,7 @@
 {
   "creativeTab.simple_cooking_tab": "Simple Cooking",
 
-  "item.simple-cooking.chocolate": "Chocolate"
+  "item.simple-cooking.chocolate": "Chocolate",
+
+  "block.simple-cooking.stove": "Stove"
 }

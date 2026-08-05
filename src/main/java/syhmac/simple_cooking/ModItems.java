@@ -15,7 +15,7 @@ import java.util.function.Function;
 
 public class ModItems {
     public static void init() {
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, SIMPLE_COOKING_TAB_KEY, SIMPLE_COOKING_TAB);
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ModCreativeModeTab.SIMPLE_COOKING_TAB_KEY, ModCreativeModeTab.SIMPLE_COOKING_TAB);
     }
 
     public static Item register(ResourceKey<Item> itemKey, Function<Item.Properties, Item> itemFactory, Item.Properties properties) {
@@ -28,15 +28,4 @@ public class ModItems {
             ModItemIds.CHOCOLATE,
             Item::new, new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(3).build())
     );
-
-    public static final ResourceKey<CreativeModeTab> SIMPLE_COOKING_TAB_KEY = ResourceKey.create(
-            BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(SimpleCooking.MOD_ID, "simple_cooking_tab")
-    );
-
-    public static final CreativeModeTab SIMPLE_COOKING_TAB = FabricCreativeModeTab.builder()
-            .icon(() -> new ItemStack(CHOCOLATE))
-            .title(Component.translatable("creativeTab.simple_cooking_tab"))
-            .displayItems((params, output) -> {
-                output.accept(CHOCOLATE);
-            }).build();
 }
